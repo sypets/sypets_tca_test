@@ -1,0 +1,68 @@
+{
+	"name": "sypets/sypets-tca-test",
+	"type": "typo3-cms-extension",
+	"description": "Test TCA features",
+	"license": ["GPL-2.0-or-later"],
+	"keywords": [
+		"TYPO3",
+		"TYPO3 extension",
+		"links",
+		"broken links",
+		"broken link checking",
+		"broken link fixer",
+		"content quality"
+	],
+	"authors": [
+		{
+			"name": "Sybille Peters",
+			"email": "sypets@gmx.de",
+			"role": "Developer"
+		}
+	],
+	"config": {
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin",
+		"allow-plugins": {
+			"typo3/cms-composer-installers": true,
+			"typo3/class-alias-loader": true
+		}
+	},
+	"require": {
+		"php": "^8.0",
+		"typo3/cms-backend": "^11.5.28 || ^12 || ^13",
+		"typo3/cms-core": "^11.5.28 || ^12 || ^13"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^3.2",
+		"jangregor/phpstan-prophecy": "^1.0.0",
+		"phpspec/prophecy": "^1.15.0",
+		"phpspec/prophecy-phpunit": "^2.0.1",
+		"phpstan/phpstan": "^1.8.2",
+		"phpunit/phpunit": "^9.5.20",
+		"ssch/typo3-rector": "^1.2",
+		"typo3/testing-framework": "^7.0.2"
+	},
+	"conflict": {
+		"typo3/cms": "*"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "sypets_tca_test",
+			"web-dir": ".Build/Web"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Sypets\\SypetsTcaTest\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Sypets\\SypetsTcaTest\\Tests\\": "Tests/"
+		}
+	},
+	"scripts": {
+
+	}
+}
